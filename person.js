@@ -29,4 +29,3 @@ people.forEach(function (person) {
     var newPerson = new Person(person.name, person.age, person.occupation);
     newPerson.logPerson();
 });
-console.log("honk honk");

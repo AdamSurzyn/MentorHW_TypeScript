@@ -41,5 +41,3 @@ people.forEach((person: IPerson) => {
   let newPerson = new Person(person.name, person.age, person.occupation);
   newPerson.logPerson();
 });
-
-console.log("honk honk");
