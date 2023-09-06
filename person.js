@@ -1,15 +1,15 @@
-var Person = /** @class */ (function () {
-    function Person(name, age, occupation) {
+"use strict";
+class Person {
+    constructor(name, age, occupation) {
         this.name = name;
         this.age = age;
         this.occupation = occupation;
     }
-    Person.prototype.logPerson = function () {
-        console.log(" - ".concat(this.name, ", ").concat(this.age));
-    };
-    return Person;
-}());
-var people = [
+    logPerson() {
+        console.log(` - ${this.name}, ${this.age}`);
+    }
+}
+const people = [
     {
         name: "Max Mustermann",
         age: 25,
@@ -22,10 +22,10 @@ var people = [
     },
 ];
 function logPerson(person) {
-    console.log(" - ".concat(person.name, ", ").concat(person.age));
+    console.log(` - ${person.name}, ${person.age}`);
 }
 console.log(people);
-people.forEach(function (person) {
-    var newPerson = new Person(person.name, person.age, person.occupation);
+people.forEach((person) => {
+    let newPerson = new Person(person.name, person.age, person.occupation);
     newPerson.logPerson();
 });
